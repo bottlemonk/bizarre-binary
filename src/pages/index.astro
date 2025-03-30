@@ -1,66 +1,10 @@
 ---
-import Header from "../components/header.astro";
-import Footer from "../components/footer.astro";
-import "../styles/global.css";
-
-const pageTitle = "Home Page";
+import BaseLayout from "./BaseLayout.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<style></style>
-	</head>
-	<body class="bg-gray-100 font-sans">
-		<Header />
-		<main class="container mx-auto py-12 px-4">
-			<section class="mb-12">
-				<h1 class="text-4xl font-bold text-gray-800 mb-4">
-					Welcome to Our Website
-				</h1>
-				<p class="text-gray-700 leading-relaxed">
-					This is a simple and clean web page built with Tailwind CSS.
-					It's designed to be responsive and easy to customize. You
-					can replace this placeholder text with your own content.
-					This example uses a container to limit the width of the
-					content and a muted background color for a clean look.
-				</p>
-			</section>
 
-			<section
-				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-			>
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-gray-800 mb-2">
-						Card 1
-					</h2>
-					<p class="text-gray-700">
-						Some content for the first card.
-					</p>
-				</div>
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-gray-800 mb-2">
-						Card 2
-					</h2>
-					<p class="text-gray-700">
-						Some content for the second card.
-					</p>
-				</div>
-				<div class="bg-white rounded-lg shadow-md p-6">
-					<h2 class="text-xl font-semibold text-gray-800 mb-2">
-						Card 3
-					</h2>
-					<p class="text-gray-700">
-						Some content for the third card.
-					</p>
-					
-				</div>
-			</section>
-		</main>
-	</body>
-</html>
+<BaseLayout title="Home Page">
+
+  <p>My page content, wrapped in a layout!</p>
+
+</BaseLayout>
